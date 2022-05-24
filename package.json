@@ -4,7 +4,7 @@
   "description": "Orbital CLI ",
   "author": "\"Foci Solutions Inc.\"",
   "bin": {
-    "orb": "./bin/run"
+    "orbital": "./bin/run"
   },
   "homepage": "https://github.com/\"Foci Solutions\"/\"Orbital-CLI\"",
   "license": "MIT",
