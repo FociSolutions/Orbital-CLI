@@ -1,6 +1,7 @@
 {
   "root": true,
   "plugins": ["unused-imports"],
+  "parser": "@typescript-eslint/parser", // Specifies the ESLint parser
   "parserOptions": {
     "ecmaVersion": 2020, // Allows for the parsing of modern ECMAScript features
     "sourceType": "module", // Allows for the use of imports
@@ -117,6 +118,7 @@
           "error",
           {
             "ignoreEnums": true,
+            "ignoreTypeIndexes": true,
             "ignoreNumericLiteralTypes": true,
             "ignoreReadonlyClassProperties": true,
             "ignore": [-1, 0, 1]
