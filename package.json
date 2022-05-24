@@ -44,7 +44,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "globby": "^13",
+    "globby": "^11",
     "husky": "^8.0.1",
     "mocha": "^10",
     "oclif": "^3",
