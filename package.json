@@ -17,14 +17,20 @@
     "/oclif.manifest.json"
   ],
   "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
+    "start": "./bin/dev",
+    "clean": "shx rm -rf dist && shx echo 'Clean Complete'",
+    "build": "npm run clean && tsc -b && shx echo 'Build Complete'",
     "format": "prettier --write .",
     "format:ci": "prettier --check \"*.{json,yml,yaml,md,css}\"",
-    "lint": "eslint . --fix --ext .ts --config .eslintrc",
+    "lint": "eslint . --ext .ts --cache --report-unused-disable-directives --fix --config .eslintrc",
+    "lint-f": "eslint . --ext .ts --report-unused-disable-directives --fix --config .eslintrc",
+    "lint:ci": "eslint . --ext .ts --config .eslintrc",
     "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "yarn lint",
-    "prepack": "yarn build && oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "test": "mocha \"test/**/*.test.ts\"",
+    "test:ci": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "type": "tsc --noEmit -p tsconfig.json",
+    "type:spec": "tsc --noEmit -p test/tsconfig.json",
     "version": "oclif readme && git add README.md",
     "pre-commit": "lint-staged",
     "prepare": "husky install"
@@ -60,8 +66,8 @@
     "*.ts": "eslint --cache --fix"
   },
   "oclif": {
-    "bin": "orb",
-    "dirname": "orb",
+    "bin": "orbital",
+    "dirname": "orbital-cli",
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",

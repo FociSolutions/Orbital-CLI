@@ -1,18 +1,19 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
   "plugins": ["unused-imports"],
+  "parserOptions": {
+    "ecmaVersion": 2020, // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module", // Allows for the use of imports
+    "project": "tsconfig.eslint.json"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended" // Must be LAST in the list. Enables eslint-plugin-prettier and eslint-config-prettier.
+  ],
   "overrides": [
     {
       "files": ["*.ts"],
-      "parserOptions": {
-        "project": ["tsconfig.eslint.json"]
-      },
-      "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended" // Must be last in the list
-      ],
       "rules": {
         /**
          * Other Plugin Rules
@@ -196,7 +197,7 @@
       }
     },
     {
-      "files": ["*.spec.ts"],
+      "files": ["*.test.ts"],
       "rules": {
         "@typescript-eslint/no-magic-numbers": ["off"],
         "@typescript-eslint/consistent-type-assertions": ["off"]
