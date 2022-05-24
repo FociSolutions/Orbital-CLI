@@ -14,7 +14,6 @@
         "plugin:prettier/recommended" // Must be last in the list
       ],
       "rules": {
-        
         /**
          * Other Plugin Rules
          */

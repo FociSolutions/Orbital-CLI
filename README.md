@@ -1,5 +1,4 @@
-oclif-hello-world
-=================
+# oclif-hello-world
 
 oclif example Hello World CLI
 
@@ -10,11 +9,15 @@ oclif example Hello World CLI
 [![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g oclif-hello-world
 $ oex COMMAND
@@ -26,18 +29,22 @@ USAGE
   $ oex COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`oex hello PERSON`](#oex-hello-person)
-* [`oex hello world`](#oex-hello-world)
-* [`oex help [COMMAND]`](#oex-help-command)
-* [`oex plugins`](#oex-plugins)
-* [`oex plugins:inspect PLUGIN...`](#oex-pluginsinspect-plugin)
-* [`oex plugins:install PLUGIN...`](#oex-pluginsinstall-plugin)
-* [`oex plugins:link PLUGIN`](#oex-pluginslink-plugin)
-* [`oex plugins:uninstall PLUGIN...`](#oex-pluginsuninstall-plugin)
-* [`oex plugins update`](#oex-plugins-update)
+
+- [`oex hello PERSON`](#oex-hello-person)
+- [`oex hello world`](#oex-hello-world)
+- [`oex help [COMMAND]`](#oex-help-command)
+- [`oex plugins`](#oex-plugins)
+- [`oex plugins:inspect PLUGIN...`](#oex-pluginsinspect-plugin)
+- [`oex plugins:install PLUGIN...`](#oex-pluginsinstall-plugin)
+- [`oex plugins:link PLUGIN`](#oex-pluginslink-plugin)
+- [`oex plugins:uninstall PLUGIN...`](#oex-pluginsuninstall-plugin)
+- [`oex plugins update`](#oex-plugins-update)
 
 ## `oex hello PERSON`
 
@@ -172,7 +179,7 @@ ALIASES
   $ oex plugins add
 
 EXAMPLES
-  $ oex plugins:install myplugin 
+  $ oex plugins:install myplugin
 
   $ oex plugins:install https://github.com/someuser/someplugin
 
@@ -244,4 +251,5 @@ FLAGS
 DESCRIPTION
   Update installed plugins.
 ```
+
 <!-- commandsstop -->
