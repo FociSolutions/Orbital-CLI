@@ -1,5 +1,5 @@
 {
-  "name": "orb",
+  "name": "orbital-cli",
   "version": "0.0.0",
   "description": "Orbital CLI ",
   "author": "\"Foci Solutions Inc.\"",
@@ -74,11 +74,7 @@
       "@oclif/plugin-plugins"
     ],
     "topicSeparator": " ",
-    "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
-      }
-    }
+    "topics": {}
   },
   "engines": {
     "node": ">=12.0.0"
