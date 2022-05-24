@@ -1,0 +1,22 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846
+  // for the documentation about the extensions.json format
+  "recommendations": [
+    // Use prettier as a formatter in VSCode
+    "esbenp.prettier-vscode",
+    // Git Blame and other git metadata integrated into VSCode
+    "eamodio.gitlens",
+    // enable eslint-based intellisense in code
+    "dbaeumer.vscode-eslint",
+    // VSCode message when package-lock.json changes
+    "matteopieroni.refresh-npm-packages",
+    // Command Pallette for scripts defined in package.json
+    "eg2.vscode-npm-script",
+    // INtellisense when creating imports for node_modules packages
+    "christian-kohler.npm-intellisense",
+    // Code-aware spell checker
+    "streetsidesoftware.code-spell-checker",
+    // Detect the .editiorconfig file
+    "EditorConfig.EditorConfig"
+  ]
+}
