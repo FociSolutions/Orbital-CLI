@@ -18,7 +18,7 @@ $ npm install -g orbital-cli
 $ orbital COMMAND
 running command...
 $ orbital (--version)
-orbital-cli/0.0.0 darwin-x64 node-v16.14.2
+orbital-cli/0.1.0 darwin-x64 node-v16.14.2
 $ orbital --help [COMMAND]
 USAGE
   $ orbital COMMAND
