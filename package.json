@@ -1,0 +1,89 @@
+{
+  "name": "orbital-cli",
+  "version": "0.0.0",
+  "description": "Orbital CLI ",
+  "author": "\"Foci Solutions Inc.\"",
+  "bin": {
+    "orbital": "./bin/run"
+  },
+  "homepage": "https://github.com/\"Foci Solutions\"/\"Orbital-CLI\"",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "\"Foci Solutions\"/\"Orbital-CLI\"",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "scripts": {
+    "start": "./bin/dev",
+    "clean": "shx rm -rf dist && shx echo 'Clean Complete'",
+    "build": "npm run clean && tsc -b && shx echo 'Build Complete'",
+    "format": "prettier --write .",
+    "format:ci": "prettier --check \"*.{json,yml,yaml,md,css}\"",
+    "lint": "eslint . --ext .ts --cache --report-unused-disable-directives --fix --config .eslintrc",
+    "lint-f": "eslint . --ext .ts --report-unused-disable-directives --fix --config .eslintrc",
+    "lint:ci": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "test": "mocha \"test/**/*.test.ts\"",
+    "test:ci": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "type": "tsc --noEmit -p tsconfig.json",
+    "type:spec": "tsc --noEmit -p test/tsconfig.json",
+    "version": "oclif readme && git add README.md",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^2.1.0"
+  },
+  "devDependencies": {
+    "@oclif/test": "^2",
+    "@types/chai": "^4",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^16",
+    "@typescript-eslint/eslint-plugin": "^5",
+    "@typescript-eslint/parser": "^5",
+    "chai": "^4",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "globby": "^11",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.2",
+    "mocha": "^10",
+    "oclif": "^3",
+    "prettier": "^2.6.2",
+    "shx": "^0.3.4",
+    "ts-node": "^10.8.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4"
+  },
+  "lint-staged": {
+    "*.{js,json,yaml,yml,html,css,scss,md}": "prettier --write",
+    "*.ts": "eslint --cache --fix"
+  },
+  "oclif": {
+    "bin": "orbital",
+    "dirname": "orbital-cli",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {}
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": "https://github.com/\"Foci Solutions\"/\"Orbital-CLI\"/issues",
+  "keywords": [
+    "oclif"
+  ],
+  "types": "dist/index.d.ts"
+}
